@@ -44,6 +44,11 @@ Due to size constraints, raw data files and processed tensors are **not included
 
 ---
 
+## How to Run
+1. Open final-project.ipynb
+2. Run all cells sequentially
+3. Generated outputs will appear in the outputs directory
+
 
 ## Links
 - 📽 Presentation Video: [YouTube Link]

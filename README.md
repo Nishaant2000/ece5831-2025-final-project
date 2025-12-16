@@ -44,5 +44,10 @@ Due to size constraints, raw data files and processed tensors are **not included
 
 ---
 
-## 📁 Repository Structure
 
+## Links
+- 📽 Presentation Video: [YouTube Link]
+- 📊 Presentation Slides: presentation/final_presentation.pptx
+- 📄 Final Report: report/final_report.pdf
+- 📂 Dataset: dataset/fashion-mnist.zip
+- 🎥 Demo Video: [YouTube Link]

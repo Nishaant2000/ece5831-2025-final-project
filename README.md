@@ -40,7 +40,7 @@ The project uses the **Fashion-MNIST** dataset, a standard benchmark dataset con
 The dataset is automatically downloaded using  
 `torchvision.datasets.FashionMNIST`.
 
-Due to size constraints, raw data files and processed tensors are **not included in this GitHub repository**.
+Due to size constraints, raw data files, outputs and processed tensors are **not included in this GitHub repository**.
 
 ---
 
@@ -51,8 +51,8 @@ Due to size constraints, raw data files and processed tensors are **not included
 
 
 ## Links
-- 📽 Presentation Video: [YouTube Link]
-- 📊 Presentation Slides: presentation/final_presentation.pptx
-- 📄 Final Report: report/final_report.pdf
-- 📂 Dataset: dataset/fashion-mnist.zip
+- 📽 Presentation Video: https://drive.google.com/file/d/1uVmxxZvdvLm3vVbBx8ACJC4Ch0EhR6G2/view?usp=drive_link
+- 📊 Presentation Slides: (https://docs.google.com/presentation/d/1I18H0U4Wn70LrOTuI0y9eWfhSGlObeM-/edit?usp=sharing&ouid=110052246928755423511&rtpof=true&sd=true)
+- 📄 Final Report: https://drive.google.com/drive/folders/1TzyslFxhS1RPKGIaRgxkrwTxk5etHXzl?usp=drive_link
+- 📂 Dataset: (https://drive.google.com/drive/folders/1gTOnX7QkJH7V7CyaiiYCUw0ro0zqx4vv?usp=drive_link)
 - 🎥 Demo Video: (https://youtu.be/Wgf_A_jeKxM)

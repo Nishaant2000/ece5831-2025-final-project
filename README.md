@@ -1,158 +1,48 @@
-project:
-  title: Interpretable Hybrid Model for Visual Pattern Recognition
-  course: ECE 5831 – Pattern Recognition and Neural Networks
-  institution: University of Michigan–Dearborn
-  academic_year: 2024-2025
+# Interpretable Hybrid Model for Visual Pattern Recognition  
+**ECE 5831 – Pattern Recognition and Neural Networks (PRNN)**  
+University of Michigan–Dearborn  
+Academic Year: 2024–2025
 
-  description: >
-    This project investigates visual pattern recognition using both
-    neural networks and classical pattern recognition techniques,
-    with a strong emphasis on interpretability. A baseline CNN is
-    combined with handcrafted features to form a hybrid model that
-    improves transparency without sacrificing performance.
+---
 
-authors:
-  - name: ""
-    role: Student
-    email: ""
+## 📌 Project Overview
 
-resources:
-  github_repository: ""           # TODO: GitHub repo URL
-  demo_video_youtube: ""           # TODO: YouTube demo video link
-  presentation_slides_drive: ""   # TODO: Google Drive slides link
-  final_report_drive: ""          # TODO: Google Drive report PDF link
-  dataset_drive: ""               # TODO: Google Drive dataset / README link
+This project investigates **visual pattern recognition** using both **neural networks** and **classical pattern recognition techniques**, with a strong emphasis on **model interpretability**.
 
-repository_structure:
-  root:
-    - README.md
-    - data.yaml
-    - final-project.ipynb
-    - requirements.txt
-    - src/
+We begin with a **baseline Convolutional Neural Network (CNN)** trained on the Fashion-MNIST dataset to learn hierarchical visual representations. While CNNs achieve strong classification performance, they often behave as **black-box models**, making it difficult to understand how predictions are formed.
 
-  src_files:
-    - baseline_cnn.py
-    - gradcam.py
-    - explain_gradients.py
-    - handcrafted_features.py
-    - hybrid_model.py
-    - train_utils.py
-    - save_fashionmnist_tensor.py
+To address this limitation, the project proposes a **hybrid model** that combines:
+- **Learned CNN embeddings (deep features)**  
+- **Handcrafted visual descriptors** such as **HOG** and **GLCM**
 
-dataset:
-  name: Fashion-MNIST
-  description: >
-    Fashion-MNIST is a benchmark dataset consisting of grayscale images
-    of clothing items, commonly used for evaluating pattern recognition
-    and neural network models.
+These features are fused and classified using a **Random Forest classifier**, enabling both strong performance and enhanced interpretability. This approach aligns directly with core principles of **Pattern Recognition and Neural Networks**.
 
-  image_properties:
-    type: grayscale
-    resolution: 28x28
-    channels: 1
+---
 
-  classes:
-    - T-shirt/top
-    - Trouser
-    - Pullover
-    - Dress
-    - Coat
-    - Sandal
-    - Shirt
-    - Sneaker
-    - Bag
-    - Ankle boot
+## 🎯 Project Objectives
 
-  size:
-    training_samples: 60000
-    test_samples: 10000
-    total_samples: 70000
+- Train and evaluate a baseline CNN for image classification  
+- Analyze CNN behavior using **Grad-CAM**, **Saliency Maps**, and **Integrated Gradients**  
+- Extract handcrafted features for classical pattern recognition  
+- Build a hybrid feature-fusion model combining CNN and handcrafted features  
+- Improve interpretability using **feature importance analysis** and **SHAP explanations**  
+- Compare performance and interpretability between baseline and hybrid models  
 
-  acquisition:
-    method: torchvision.datasets.FashionMNIST
-    framework: PyTorch
-    auto_download: true
+---
 
-  storage:
-    local_directory: data/
-    raw_format:
-      - train-images-idx3-ubyte
-      - train-labels-idx1-ubyte
-      - t10k-images-idx3-ubyte
-      - t10k-labels-idx1-ubyte
-    processed_format:
-      - fashionmnist_train_tensor.pt
-    included_in_git: false
+## 📊 Dataset
 
-preprocessing:
-  cnn_pipeline:
-    resize: 224x224
-    normalization:
-      mean: 0.5
-      std: 0.5
+The project uses the **Fashion-MNIST** dataset, a standard benchmark dataset consisting of:
+- 28×28 grayscale images  
+- 10 clothing categories  
+- 60,000 training samples and 10,000 test samples  
 
-  handcrafted_features:
-    hog:
-      orientations: 9
-      pixels_per_cell: [8, 8]
-      cells_per_block: [2, 2]
-    glcm:
-      distances: [1, 2]
-      angles: [0, 45, 90, 135]
-      properties:
-        - contrast
-        - dissimilarity
-        - homogeneity
-        - energy
-        - correlation
+The dataset is automatically downloaded using  
+`torchvision.datasets.FashionMNIST`.
 
-models:
-  baseline_model:
-    type: Convolutional Neural Network
-    architecture: ResNet-18
-    framework: PyTorch
-    task: Image classification
+Due to size constraints, raw data files and processed tensors are **not included in this GitHub repository**.
 
-  hybrid_model:
-    type: Feature Fusion Model
-    components:
-      - CNN embeddings
-      - HOG features
-      - GLCM features
-    classifier: Random Forest
+---
 
-interpretability:
-  cnn_methods:
-    - Grad-CAM
-    - Saliency Maps
-    - Integrated Gradients
+## 📁 Repository Structure
 
-  hybrid_methods:
-    - Feature Importance
-    - SHAP
-
-evaluation:
-  metrics:
-    - Accuracy
-    - Confusion Matrix
-
-  comparison:
-    baseline_vs_hybrid: true
-
-execution:
-  environment:
-    python_version: ">=3.9"
-    framework: PyTorch
-    hardware_support:
-      - CPU
-      - Apple Metal (MPS)
-      - CUDA (if available)
-
-notes:
-  - >
-    Large datasets, trained models, and output visualizations are
-    excluded from the GitHub repository due to size limitations.
-  - >
-    All experiments are reproducible using the provided scripts
-    and final-project.ipynb notebook.

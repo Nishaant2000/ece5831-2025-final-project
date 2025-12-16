@@ -55,4 +55,4 @@ Due to size constraints, raw data files and processed tensors are **not included
 - 📊 Presentation Slides: presentation/final_presentation.pptx
 - 📄 Final Report: report/final_report.pdf
 - 📂 Dataset: dataset/fashion-mnist.zip
-- 🎥 Demo Video: [YouTube Link]
+- 🎥 Demo Video: (https://youtu.be/Wgf_A_jeKxM)

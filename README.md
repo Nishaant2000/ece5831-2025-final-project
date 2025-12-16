@@ -1,7 +1,7 @@
 # Interpretable Hybrid Model for Visual Pattern Recognition  
 **ECE 5831 – Pattern Recognition and Neural Networks (PRNN)**  
 University of Michigan–Dearborn  
-Academic Year: 2024–2026
+
 
 ---
 
